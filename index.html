@@ -3,18 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hunter X Hunter - Trailers Oficiais</title>
+    <title>Trailers de Animes</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Fonte moderna */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            text-align: center;
+            background-color: #f47521; /* laranja Crunchyroll */
+            color: #000;
+            margin: 0;
+        }
+
+        header {
+            background-color: #F47521;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #000;
+            font-size: 28px;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        .video-sinopse {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        iframe {
+            border-radius: 12px;
+            border: 3px solid #000;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+        }
+
+        .sinopse {
+            max-width: 400px;
+            text-align: left;
+        }
+
+        .sinopse-titulo {
+            font-size: 14px;
+            color: #000;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            margin: 15px 0 5px;
+            color: #000;
+        }
+
+        .hashtags {
+            color: #000;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #F47521;
+            padding: 15px;
+            font-size: 14px;
+            color: #000;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .video-sinopse {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .sinopse {
+                max-width: 90%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <h1>Hunter X Hunter - Set 1 (Trailer Oficial)</h1>
-        <p>#hunterXhunter #killua #anime #japão #animeévida</p>
+        <h1>Trailers de Animes</h1>
+        <p>#hunterXhunter #dragonball #naruto #anime #japão #animeévida</p>
     </header>
 
     <main>
-        <!-- Layout do primeiro vídeo: vídeo à esquerda, sinopse à direita -->
+
+        <!-- Primeiro vídeo: Hunter X Hunter -->
+        <h2>Hunter X Hunter - Trailer Oficial</h2>
+        <p class="hashtags">#hunterXhunter #killua #anime</p>
         <section class="video-sinopse">
             <iframe width="560" height="315"
                 src="https://www.youtube.com/embed/d6kBeJjTGnY?si=MkfZ6Xn6SmJXq1jk"
@@ -29,7 +119,7 @@
             </div>
         </section>
 
-        <!-- Segundo vídeo já existente: sinopse à esquerda -->
+        <!-- Segundo vídeo: Dragon Ball Kai -->
         <h2>Dragon Ball Kai Trailer</h2>
         <p class="hashtags">#dragonball #Akiraforever #sagabull</p>
         <section class="video-sinopse">
@@ -44,6 +134,23 @@
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
+        </section>
+
+        <!-- Terceiro vídeo: Naruto Shippuden -->
+        <h2>Naruto Shippuden Trailer</h2>
+        <p class="hashtags">#naruto #shippuden #anime #ninjaworld</p>
+        <section class="video-sinopse">
+            <iframe width="560" height="315"
+                src="<iframe width="560" height="315" src="https://www.youtube.com/embed/22R0j8UKRzY?si=YWejUfqelBlp3ZUu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" 
+                title="Naruto Shippuden Trailer"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+
+            <div class="sinopse">
+                <p class="sinopse-titulo">Sinopse</p>
+                <p>Naruto Shippuden acompanha Naruto Uzumaki, agora mais velho, enquanto ele enfrenta perigos maiores e inimigos mais poderosos, buscando proteger seus amigos e se tornar o Hokage da Vila da Folha. A série explora crescimento, amizade e batalhas épicas no mundo ninja.</p>
+            </div>
         </section>
 
     </main>
