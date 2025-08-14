@@ -39,6 +39,24 @@ iframe {
     margin-bottom: 10px;
 }
 
+/* Layout vídeo + sinopse */
+.video-sinopse {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.sinopse {
+    max-width: 400px;
+    text-align: left;
+}
+
+.sinopse-titulo {
+    font-size: 12px;
+    color: #ffd700;
+    margin-bottom: 5px;
+}
+
 footer {
     background-color: #222;
     padding: 10px;
