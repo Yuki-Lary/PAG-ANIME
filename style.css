@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #ff6f00; /* um laranja um pouco mais escuro para o header */
+    background-color: #F47521; /* um laranja um pouco mais escuro para o header */
     padding: 20px;
 }
 
@@ -53,7 +53,7 @@ iframe {
 }
 
 footer {
-    background-color: #ff6f00; /* laranja escuro para o footer */
+    background-color: #F47521; /* laranja escuro para o footer */
     padding: 10px;
     font-size: 14px;
     color: #000; /* texto preto */
