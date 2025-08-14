@@ -29,8 +29,14 @@ iframe {
 }
 
 .videos h2 {
-    margin: 15px 0 10px;
+    margin: 15px 0 5px;
     color: #ffd700; /* dourado estilo Dragon Ball */
+}
+
+.hashtags {
+    color: #ccc;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
 footer {
