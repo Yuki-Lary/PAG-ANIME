@@ -18,15 +18,19 @@ header h1 {
 
 .videos {
     display: flex;
-    flex-direction: column; /* coloca um embaixo do outro */
-    align-items: center;    /* centraliza horizontalmente */
-    gap: 20px;              /* espaço entre os vídeos */
+    flex-direction: column; /* vídeos um abaixo do outro */
+    align-items: center;
+    gap: 20px;
     padding: 20px;
 }
 
 iframe {
     border-radius: 10px;
-    max-width: 100%;
+}
+
+.videos h2 {
+    margin: 15px 0 10px;
+    color: #ffd700; /* dourado estilo Dragon Ball */
 }
 
 footer {
