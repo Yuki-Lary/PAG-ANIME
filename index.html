@@ -38,6 +38,11 @@
             flex-wrap: wrap;
         }
 
+        /* Layout invertido para o quarto vídeo */
+        .video-sinopse.invertido {
+            flex-direction: row-reverse;
+        }
+
         iframe {
             border-radius: 12px;
             border: 3px solid #000;
@@ -84,6 +89,10 @@
             .video-sinopse {
                 flex-direction: column;
                 align-items: center;
+            }
+
+            .video-sinopse.invertido {
+                flex-direction: column;
             }
 
             .sinopse {
@@ -153,20 +162,21 @@
             </div>
         </section>
 
-        <!-- Quarto vídeo: Guerreiras do K-pop -->
+        <!-- Quarto vídeo: Guerreiras do K-pop (layout invertido) -->
         <h2>Guerreiras do K-pop Trailer</h2>
         <p class="hashtags">#k-pop #divas #coreanos</p>
-        <section class="video-sinopse">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/3JTVQTk36R8?si=phqp9ZnAPv6vP2nq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                title="Guerreiras do K-pop Trailer"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-
+        <section class="video-sinopse invertido">
             <div class="sinopse">
                 <p class="sinopse-titulo">Sinopse</p>
                 <p>Quando não estão lotando estádios, as estrelas do K-pop Rumi, Mira e Zoey usam seus poderes secretos para proteger os fãs de ameaças sobrenaturais.</p>
             </div>
+
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/EXEMPLO" 
+                title="Guerreiras do K-pop Trailer"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
         </section>
 
     </main>
@@ -177,4 +187,3 @@
 
 </body>
 </html>
-
