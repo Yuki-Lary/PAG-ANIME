@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trailers de Animes e K-pop</title>
+    <title>Trailers de Animes</title>
     <link rel="stylesheet" href="style.css">
     <style>
         /* Fonte moderna */
@@ -36,11 +36,6 @@
             padding: 20px;
             justify-content: center;
             flex-wrap: wrap;
-        }
-
-        /* Layout invertido: sinopse à esquerda, vídeo à direita */
-        .video-sinopse.invertido {
-            flex-direction: row-reverse; /* vídeo à direita, sinopse à esquerda */
         }
 
         iframe {
@@ -84,15 +79,22 @@
             width: 100%;
         }
 
+        /* Divisória */
+        .divisoria {
+            margin: 40px 0 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            border-top: 3px solid #000;
+            padding-top: 10px;
+        }
+
         /* Responsividade */
         @media (max-width: 768px) {
             .video-sinopse {
                 flex-direction: column;
                 align-items: center;
-            }
-
-            .video-sinopse.invertido {
-                flex-direction: column; /* no mobile, sinopse acima do vídeo */
             }
 
             .sinopse {
@@ -105,8 +107,8 @@
 <body>
 
     <header>
-        <h1>Trailers de Animes e K-pop</h1>
-        <p>#hunterXhunter #dragonball #naruto #k-pop #anime #animeévida</p>
+        <h1>Trailers de Animes</h1>
+        <p>#hunterXhunter #dragonball #naruto #anime #japão #animeévida</p>
     </header>
 
     <main>
@@ -162,26 +164,30 @@
             </div>
         </section>
 
-        <!-- Quarto vídeo: Guerreiras do K-pop (sinopse à esquerda, vídeo à direita) -->
-        <h2>Guerreiras do K-pop Trailer</h2>
+        <!-- Quarto vídeo: Guerreiras do K-pop -->
+        <h2>Guerreiras do K-pop</h2>
         <p class="hashtags">#k-pop #divas #coreanos</p>
-        <section class="video-sinopse invertido">
+        <section class="video-sinopse">
             <div class="sinopse">
                 <p class="sinopse-titulo">Sinopse</p>
                 <p>Quando não estão lotando estádios, as estrelas do K-pop Rumi, Mira e Zoey usam seus poderes secretos para proteger os fãs de ameaças sobrenaturais.</p>
             </div>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/3JTVQTk36R8?si=phqp9ZnAPv6vP2nq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/XXXXXXX"
                 title="Guerreiras do K-pop Trailer"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
         </section>
 
+        <!-- Divisória -->
+        <h2 class="divisoria">Outros trailers</h2>
+
     </main>
 
     <footer>
-        <p>Os melhores animes e K-pop você encontra aqui</p>
+        <p>&copy; 2025 - Página de Trailers de Animes</p>
     </footer>
 
 </body>
