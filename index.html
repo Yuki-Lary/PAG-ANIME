@@ -1,276 +1,254 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trailers de Animes</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trailers de Animes</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-body {
-    font-family: 'Poppins', Arial, sans-serif;
-    text-align: center;
-    background-color: #f47521;
-    color: #000;
-    margin: 0;
-}
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            text-align: center;
+            background-color: #f47521;
+            color: #000;
+            margin: 0;
+        }
 
-header {
-    background-color: #F47521;
-    padding: 20px;
-}
+        header {
+            background-color: #F47521;
+            padding: 20px;
+        }
 
-header h1 {
-    margin: 0;
-    color: #000;
-    font-size: 28px;
-    text-shadow: 1px 1px 2px #000;
-}
+        header h1 {
+            margin: 0;
+            color: #000;
+            font-size: 28px;
+            text-shadow: 1px 1px 2px #000;
+        }
 
-.video-sinopse {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+        .video-sinopse {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-iframe {
-    border-radius: 12px;
-    border: 3px solid #000;
-    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
-}
+        iframe {
+            border-radius: 12px;
+            border: 3px solid #000;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+        }
 
-.sinopse {
-    max-width: 400px;
-    text-align: left;
-}
+        .sinopse {
+            max-width: 400px;
+            text-align: left;
+        }
 
-.sinopse-titulo {
-    font-size: 14px;
-    color: #000;
-    margin-bottom: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
+        .sinopse-titulo {
+            font-size: 14px;
+            color: #000;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
 
-h2 {
-    margin: 15px 0 5px;
-    color: #000;
-}
+        h2 {
+            margin: 15px 0 5px;
+            color: #000;
+        }
 
-.hashtags {
-    color: #000;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
+        .hashtags {
+            color: #000;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
 
-footer {
-    background-color: #F47521;
-    padding: 15px;
-    font-size: 14px;
-    color: #000;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
+        footer {
+            background-color: #F47521;
+            padding: 15px;
+            font-size: 14px;
+            color: #000;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
 
-/* Divisória */
-.divisoria {
-    margin: 40px 0 20px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #000;
-    border-top: 3px solid #000;
-    padding-top: 10px;
-}
+        /* Divisória */
+        .divisoria {
+            margin: 40px 0 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            border-top: 3px solid #000;
+            padding-top: 10px;
+        }
 
-/* Carrossel */
-.carousel-container {
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto 40px;
-    overflow: hidden;
-}
+        /* Galeria horizontal fixa */
+        .galeria {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            overflow-x: auto; /* permite scroll horizontal se houver excesso */
+            max-width: 100%;
+        }
 
-.galeria {
-    display: flex;
-    gap: 15px;
-    transition: transform 0.3s ease-in-out;
-}
+        .galeria a {
+            flex: 0 0 auto; /* mantém tamanho fixo dos itens */
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
 
-.galeria a {
-    flex: 0 0 auto;
-    display: block;
-    text-decoration: none;
-}
+        .galeria a:hover {
+            transform: scale(1.05);
+        }
 
-.galeria img {
-    width: 180px;
-    border-radius: 12px;
-    border: 3px solid #000;
-    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
-}
+        .galeria img {
+            width: 200px; /* largura fixa das miniaturas */
+            border-radius: 12px;
+            border: 3px solid #000;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+        }
 
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: #fff;
-    border: none;
-    font-size: 24px;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 10;
-}
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .video-sinopse {
+                flex-direction: column;
+                align-items: center;
+            }
 
-#prev {
-    left: 10px;
-}
+            .sinopse {
+                max-width: 90%;
+                text-align: center;
+            }
 
-#next {
-    right: 10px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .video-sinopse {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .sinopse {
-        max-width: 90%;
-        text-align: center;
-    }
-
-    .galeria img {
-        width: 140px;
-    }
-}
-</style>
+            .galeria img {
+                width: 150px; /* miniaturas menores em telas pequenas */
+            }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <h1>Trailers de Animes</h1>
-    <p>#hunterXhunter #dragonball #naruto #anime #japão #animeévida</p>
-</header>
+    <header>
+        <h1>Trailers de Animes</h1>
+        <p>#hunterXhunter #dragonball #naruto #anime #japão #animeévida</p>
+    </header>
 
-<main>
+    <main>
 
-    <!-- Vídeos principais -->
-    <h2>Hunter X Hunter - Trailer Oficial</h2>
-    <p class="hashtags">#hunterXhunter #killua #anime</p>
-    <section class="video-sinopse">
-        <iframe width="560" height="315"
-            src="https://www.youtube.com/embed/d6kBeJjTGnY?si=MkfZ6Xn6SmJXq1jk"
-            title="Trailer Hunter X Hunter"
-            frameborder="0"
-            allowfullscreen></iframe>
+        <!-- Primeiro vídeo: Hunter X Hunter -->
+        <h2>Hunter X Hunter - Trailer Oficial</h2>
+        <p class="hashtags">#hunterXhunter #killua #anime</p>
+        <section class="video-sinopse">
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/d6kBeJjTGnY?si=MkfZ6Xn6SmJXq1jk"
+                title="Trailer Hunter X Hunter"
+                frameborder="0"
+                allowfullscreen></iframe>
 
-        <div class="sinopse">
-            <p class="sinopse-titulo">Sinopse</p>
-            <p>Hunter x Hunter é um anime e mangá que segue Gon, um jovem que deseja se tornar um Hunter para encontrar seu pai, um Hunter lendário que o abandonou quando criança.</p>
-        </div>
-    </section>
+            <div class="sinopse">
+                <p class="sinopse-titulo">Sinopse</p>
+                <p>Hunter x Hunter é um anime e mangá que segue Gon, um jovem que deseja se tornar um Hunter para encontrar seu pai, um Hunter lendário que o abandonou quando criança.</p>
+            </div>
+        </section>
 
-    <h2>Dragon Ball Kai Trailer</h2>
-    <p class="hashtags">#dragonball #Akiraforever #sagabull</p>
-    <section class="video-sinopse">
-        <div class="sinopse">
-            <p class="sinopse-titulo">Sinopse</p>
-            <p>Dragon Ball Z segue as aventuras de Goku adulto e sua luta contra inimigos que ameaçam a Terra, como Saiyajins, androides e criaturas mágicas.</p>
-        </div>
+        <!-- Segundo vídeo: Dragon Ball Kai -->
+        <h2>Dragon Ball Kai Trailer</h2>
+        <p class="hashtags">#dragonball #Akiraforever #sagabull</p>
+        <section class="video-sinopse">
+            <div class="sinopse">
+                <p class="sinopse-titulo">Sinopse</p>
+                <p>Dragon Ball Z segue as aventuras de Goku adulto e sua luta contra inimigos que ameaçam a Terra, como Saiyajins, androides e criaturas mágicas.</p>
+            </div>
 
-        <iframe width="560" height="315"
-            src="https://www.youtube.com/embed/cUq5HHbu1Lw?si=6Ad_RUhrjxnzlo9B"
-            title="Dragon Ball Kai Trailer"
-            frameborder="0"
-            allowfullscreen></iframe>
-    </section>
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/cUq5HHbu1Lw?si=6Ad_RUhrjxnzlo9B"
+                title="Dragon Ball Kai Trailer"
+                frameborder="0"
+                allowfullscreen></iframe>
+        </section>
 
-    <h2>Naruto Shippuden Trailer</h2>
-    <p class="hashtags">#naruto #shippuden #anime #ninjaworld</p>
-    <section class="video-sinopse">
-        <iframe width="560" height="315"
-            src="https://www.youtube.com/embed/22R0j8UKRzY?si=1VtZ-SjJ_xZmwHY0"
-            title="Naruto Shippuden Trailer"
-            frameborder="0"
-            allowfullscreen></iframe>
+        <!-- Terceiro vídeo: Naruto Shippuden -->
+        <h2>Naruto Shippuden Trailer</h2>
+        <p class="hashtags">#naruto #shippuden #anime #ninjaworld</p>
+        <section class="video-sinopse">
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/22R0j8UKRzY?si=1VtZ-SjJ_xZmwHY0"
+                title="Naruto Shippuden Trailer"
+                frameborder="0"
+                allowfullscreen></iframe>
 
-        <div class="sinopse">
-            <p class="sinopse-titulo">Sinopse</p>
-            <p>Naruto Shippuden acompanha Naruto após seu treinamento, enfrentando a Akatsuki e a busca incessante por Sasuke, além da Quarta Guerra Ninja.</p>
-        </div>
-    </section>
+            <div class="sinopse">
+                <p class="sinopse-titulo">Sinopse</p>
+                <p>Naruto Shippuden acompanha Naruto após seu treinamento, enfrentando a Akatsuki e a busca incessante por Sasuke, além da Quarta Guerra Ninja.</p>
+            </div>
+        </section>
 
-    <h2>Guerreiras do K-pop</h2>
-    <p class="hashtags">#k-pop #divas #coreanos</p>
-    <section class="video-sinopse">
-        <div class="sinopse">
-            <p class="sinopse-titulo">Sinopse</p>
-            <p>Quando não estão lotando estádios, as estrelas do K-pop Rumi, Mira e Zoey usam seus poderes secretos para proteger os fãs de ameaças sobrenaturais.</p>
-        </div>
+        <!-- Quarto vídeo: Guerreiras do K-pop -->
+        <h2>Guerreiras do K-pop</h2>
+        <p class="hashtags">#k-pop #divas #coreanos</p>
+        <section class="video-sinopse">
+            <div class="sinopse">
+                <p class="sinopse-titulo">Sinopse</p>
+                <p>Quando não estão lotando estádios, as estrelas do K-pop Rumi, Mira e Zoey usam seus poderes secretos para proteger os fãs de ameaças sobrenaturais.</p>
+            </div>
 
-        <iframe width="560" height="315"
-            src="https://www.youtube.com/embed/XXXXXXX"
-            title="Guerreiras do K-pop Trailer"
-            frameborder="0"
-            allowfullscreen></iframe>
-    </section>
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/XXXXXXX"
+                title="Guerreiras do K-pop Trailer"
+                frameborder="0"
+                allowfullscreen></iframe>
+        </section>
 
-    <!-- Divisória -->
-    <h2 class="divisoria">Outros trailers</h2>
+        <!-- Divisória -->
+        <h2 class="divisoria">Outros trailers</h2>
 
-    <!-- Carrossel -->
-    <div class="carousel-container">
-        <button id="prev" class="carousel-btn">&#10094;</button>
-        <div class="galeria">
-            <a href="https://www.youtube.com/watch?v=uXr9Ha9qRHE" target="_blank"><img src="https://img.youtube.com/vi/uXr9Ha9qRHE/hqdefault.jpg" alt="Trailer 1"></a>
-            <a href="https://www.youtube.com/watch?v=dihcy9kIdkQ" target="_blank"><img src="https://img.youtube.com/vi/dihcy9kIdkQ/hqdefault.jpg" alt="Trailer 2"></a>
-            <a href="https://www.youtube.com/watch?v=LM1VWi1-br8" target="_blank"><img src="https://img.youtube.com/vi/LM1VWi1-br8/hqdefault.jpg" alt="Trailer 3"></a>
-            <a href="https://www.youtube.com/watch?v=fvSKmPdD2a4" target="_blank"><img src="https://img.youtube.com/vi/fvSKmPdD2a4/hqdefault.jpg" alt="Trailer 4"></a>
-            <a href="https://www.youtube.com/watch?v=x7uLutVRBfI" target="_blank"><img src="https://img.youtube.com/vi/x7uLutVRBfI/hqdefault.jpg" alt="Trailer 5"></a>
-            <a href="https://www.youtube.com/watch?v=zz37nGym3OQ" target="_blank"><img src="https://img.youtube.com/vi/zz37nGym3OQ/hqdefault.jpg" alt="Trailer 6"></a>
-            <a href="https://www.youtube.com/watch?v=PosuNLDgfL0" target="_blank"><img src="https://img.youtube.com/vi/PosuNLDgfL0/hqdefault.jpg" alt="Trailer 7"></a>
-            <a href="https://www.youtube.com/watch?v=pv8A7eubPQQ" target="_blank"><img src="https://img.youtube.com/vi/pv8A7eubPQQ/hqdefault.jpg" alt="Trailer 8"></a>
-            <a href="https://www.youtube.com/watch?v=Ln_imebEmAQ" target="_blank"><img src="https://img.youtube.com/vi/Ln_imebEmAQ/hqdefault.jpg" alt="Trailer 9"></a>
-            <a href="https://www.youtube.com/watch?v=6MRxT8kz30k" target="_blank"><img src="https://img.youtube.com/vi/6MRxT8kz30k/hqdefault.jpg" alt="Trailer 10"></a>
-        </div>
-        <button id="next" class="carousel-btn">&#10095;</button>
-    </div>
+        <!-- Galeria de miniaturas horizontal -->
+        <section class="galeria">
+            <a href="https://www.youtube.com/watch?v=uXr9Ha9qRHE" target="_blank">
+                <img src="https://img.youtube.com/vi/uXr9Ha9qRHE/hqdefault.jpg" alt="Trailer 1">
+            </a>
+            <a href="https://www.youtube.com/watch?v=dihcy9kIdkQ" target="_blank">
+                <img src="https://img.youtube.com/vi/dihcy9kIdkQ/hqdefault.jpg" alt="Trailer 2">
+            </a>
+            <a href="https://www.youtube.com/watch?v=LM1VWi1-br8" target="_blank">
+                <img src="https://img.youtube.com/vi/LM1VWi1-br8/hqdefault.jpg" alt="Trailer 3">
+            </a>
+            <a href="https://www.youtube.com/watch?v=fvSKmPdD2a4" target="_blank">
+                <img src="https://img.youtube.com/vi/fvSKmPdD2a4/hqdefault.jpg" alt="Trailer 4">
+            </a>
+            <a href="https://www.youtube.com/watch?v=x7uLutVRBfI" target="_blank">
+                <img src="https://img.youtube.com/vi/x7uLutVRBfI/hqdefault.jpg" alt="Trailer 5">
+            </a>
+            <a href="https://www.youtube.com/watch?v=zz37nGym3OQ" target="_blank">
+                <img src="https://img.youtube.com/vi/zz37nGym3OQ/hqdefault.jpg" alt="Trailer 6">
+            </a>
+            <a href="https://www.youtube.com/watch?v=PosuNLDgfL0" target="_blank">
+                <img src="https://img.youtube.com/vi/PosuNLDgfL0/hqdefault.jpg" alt="Trailer 7">
+            </a>
+            <a href="https://www.youtube.com/watch?v=pv8A7eubPQQ" target="_blank">
+                <img src="https://img.youtube.com/vi/pv8A7eubPQQ/hqdefault.jpg" alt="Trailer 8">
+            </a>
+            <a href="https://www.youtube.com/watch?v=Ln_imebEmAQ" target="_blank">
+                <img src="https://img.youtube.com/vi/Ln_imebEmAQ/hqdefault.jpg" alt="Trailer 9">
+            </a>
+            <a href="https://www.youtube.com/watch?v=6MRxT8kz30k" target="_blank">
+                <img src="https://img.youtube.com/vi/6MRxT8kz30k/hqdefault.jpg" alt="Trailer 10">
+            </a>
+        </section>
 
-</main>
+    </main>
 
-<footer>
-    <p>&copy; 2025 - Página de Trailers de Animes</p>
-</footer>
-
-<script>
-const prevBtn = document.getElementById('prev');
-const nextBtn = document.getElementById('next');
-const galeria = document.querySelector('.galeria');
-const scrollAmount = 200;
-
-nextBtn.addEventListener('click', () => {
-    galeria.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-});
-
-prevBtn.addEventListener('click', () => {
-    galeria.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-});
-
-// Auto-play
-setInterval(() => {
-    galeria.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-}, 3000);
-</script>
+    <footer>
+        <p>&copy; 2025 - Página de Trailers de Animes</p>
+    </footer>
 
 </body>
 </html>
+
