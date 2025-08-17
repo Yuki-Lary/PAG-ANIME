@@ -252,9 +252,25 @@ footer {
     <p>&copy; 2025 - Página de Trailers de Animes</p>
 </footer>
 
+<script>
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+const galeria = document.querySelector('.galeria');
+const scrollAmount = 200;
 
+nextBtn.addEventListener('click', () => {
+    galeria.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+});
+
+prevBtn.addEventListener('click', () => {
+    galeria.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+});
+
+// Auto-play
+setInterval(() => {
+    galeria.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+}, 3000);
 </script>
 
 </body>
 </html>
-
