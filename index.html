@@ -6,13 +6,12 @@
     <title>Trailers de Animes</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Fonte moderna */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
         body {
             font-family: 'Poppins', Arial, sans-serif;
             text-align: center;
-            background-color: #f47521; /* laranja Crunchyroll */
+            background-color: #f47521;
             color: #000;
             margin: 0;
         }
@@ -90,6 +89,33 @@
             padding-top: 10px;
         }
 
+        /* Galeria */
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto 40px;
+        }
+
+        .galeria a {
+            display: block;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .galeria a:hover {
+            transform: scale(1.05);
+        }
+
+        .galeria img {
+            width: 100%;
+            border-radius: 12px;
+            border: 3px solid #000;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+        }
+
         /* Responsividade */
         @media (max-width: 768px) {
             .video-sinopse {
@@ -121,12 +147,11 @@
                 src="https://www.youtube.com/embed/d6kBeJjTGnY?si=MkfZ6Xn6SmJXq1jk"
                 title="Trailer Hunter X Hunter"
                 frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
 
             <div class="sinopse">
                 <p class="sinopse-titulo">Sinopse</p>
-                <p>Hunter x Hunter é um anime e mangá que segue Gon, um jovem que deseja se tornar um Hunter (caçador de seres mágicos, lugares exóticos e tesouros) para encontrar seu pai, um Hunter lendário que o abandonou quando criança. Para se tornar um Hunter, Gon deve passar por um exame rigoroso e enfrentar desafios que testarão sua força e habilidades.</p>
+                <p>Hunter x Hunter é um anime e mangá que segue Gon, um jovem que deseja se tornar um Hunter para encontrar seu pai, um Hunter lendário que o abandonou quando criança.</p>
             </div>
         </section>
 
@@ -136,14 +161,13 @@
         <section class="video-sinopse">
             <div class="sinopse">
                 <p class="sinopse-titulo">Sinopse</p>
-                <p>Dragon Ball Z é a continuação do anime Dragon Ball, seguindo as aventuras de Goku já adulto e com foco em batalhas intensas e a defesa da Terra contra diversos inimigos, como Saiyajins, androides e criaturas mágicas. A série explora o amadurecimento de Goku, seu desenvolvimento como pai e a relação com seu filho Gohan, além de mostrar a evolução da rivalidade com Vegeta, que se torna um aliado.</p>
+                <p>Dragon Ball Z segue as aventuras de Goku adulto e sua luta contra inimigos que ameaçam a Terra, como Saiyajins, androides e criaturas mágicas.</p>
             </div>
 
             <iframe width="560" height="315"
                 src="https://www.youtube.com/embed/cUq5HHbu1Lw?si=6Ad_RUhrjxnzlo9B"
                 title="Dragon Ball Kai Trailer"
                 frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
         </section>
 
@@ -155,12 +179,11 @@
                 src="https://www.youtube.com/embed/22R0j8UKRzY?si=1VtZ-SjJ_xZmwHY0"
                 title="Naruto Shippuden Trailer"
                 frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
 
             <div class="sinopse">
                 <p class="sinopse-titulo">Sinopse</p>
-                <p>Naruto Shippuden retoma a história de Naruto Uzumaki dois anos e meio após o fim da série original, com Naruto retornando à Vila da Folha após treinamento com Jiraiya. A série foca no amadurecimento de Naruto, sua luta contra a Akatsuki e a busca por Sasuke, além de abordar a Quarta Grande Guerra Ninja.</p>
+                <p>Naruto Shippuden acompanha Naruto após seu treinamento, enfrentando a Akatsuki e a busca incessante por Sasuke, além da Quarta Guerra Ninja.</p>
             </div>
         </section>
 
@@ -177,12 +200,27 @@
                 src="https://www.youtube.com/embed/XXXXXXX"
                 title="Guerreiras do K-pop Trailer"
                 frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
         </section>
 
         <!-- Divisória -->
         <h2 class="divisoria">Outros trailers</h2>
+
+        <!-- Galeria de miniaturas -->
+        <section class="galeria">
+            <a href="https://www.youtube.com/watch?v=ysz5S6PUM-U" target="_blank">
+                <img src="https://img.youtube.com/vi/ysz5S6PUM-U/hqdefault.jpg" alt="Trailer 1">
+            </a>
+            <a href="https://www.youtube.com/watch?v=ScMzIvxBSi4" target="_blank">
+                <img src="https://img.youtube.com/vi/ScMzIvxBSi4/hqdefault.jpg" alt="Trailer 2">
+            </a>
+            <a href="https://www.youtube.com/watch?v=tgbNymZ7vqY" target="_blank">
+                <img src="https://img.youtube.com/vi/tgbNymZ7vqY/hqdefault.jpg" alt="Trailer 3">
+            </a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Trailer 4">
+            </a>
+        </section>
 
     </main>
 
